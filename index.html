@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ClothManager</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="main.js" defer></script>
+  </head>
+  <body>
+    <h1>Itay's Boutique</h1>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+    </nav>
+
+    <form>
+      <select name="Our Stock" id="clothesCatalog">
+        <option value="Shirt">Shirt</option>
+        <option value="Pants">Pants</option>
+        <option value="Dress">Dress</option>
+        <option value="Skirt">Skirt</option>
+        <option value="Hat">Hat</option>
+        <option value="Jacket">Jacket</option>
+        <option value="Shoes">Shoes</option>
+        <option value="Socks">Socks</option>
+      </select>
+
+      <input
+        type="text"
+        id="descriptionOfCloth"
+        placeholder="Description about the item"
+        required
+      />
+
+      <input type="color" id="colorOfClothFromPlate" />
+
+      <input
+        type="number"
+        id="priceOfCloth"
+        placeholder="The Price"
+        required
+        min="1"
+        max="1000"
+      />
+
+      <input
+        type="number"
+        id="discountOfCloth"
+        placeholder="Discount"
+        required
+        min="0"
+        max="100"
+      />
+
+      <input type="url" id="urlOfImg" placeholder="Url image" required />
+
+      <button type="button" onclick="addToStock()">
+        Add Item To local stock ➕
+      </button>
+    </form>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Color</th>
+          <th>Price</th>
+          <th>Discount</th>
+          <th>Final Price(After Discount)</th>
+          <th>Image</th>
+          <th>Delete item 🗑️</th>
+        </tr>
+      </thead>
+
+      <tbody id="clothesTable"></tbody>
+    </table>
+
+    <p id="countCloths"></p>
+    <p id="averageCloths"></p>
+  </body>
+</html>
