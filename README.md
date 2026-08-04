@@ -1,71 +1,117 @@
-<div align="center">
+<p align="center">
+  <img src="./docs/readme-banner.svg" alt="Clothing Store Inventory Manager animated project banner" width="100%" />
+</p>
 
-# Clothing Store Inventory Manager
+<p align="center">
+  <a href="https://itaygoldenberg.github.io/Clothing-Store-Inventory-Manager/"><img src="./docs/actions/primary.svg" alt="Open the live Clothing Store Inventory Manager application" width="250" /></a>
+  <a href="https://github.com/itaygoldenberg/Clothing-Store-Inventory-Manager"><img src="./docs/actions/source.svg" alt="View Clothing Store Inventory Manager source code" width="250" /></a>
+  <a href="https://www.linkedin.com/in/itay-goldenberg/"><img src="./docs/actions/linkedin.svg" alt="Connect with Itay Goldenberg on LinkedIn" width="250" /></a>
+</p>
 
-**A focused inventory workspace for recording clothing items, discounts and final prices.**
+<p align="center">
+  <a href="#overview">Overview</a>&nbsp;&middot;&nbsp;
+  <a href="#features">Features</a>&nbsp;&middot;&nbsp;
+  <a href="#workflow">Workflow</a>&nbsp;&middot;&nbsp;
+  <a href="#technology">Technology</a>&nbsp;&middot;&nbsp;
+  <a href="#running-locally">Local setup</a>
+</p>
 
-[![Live Demo](https://img.shields.io/badge/Live_Demo-Open_App-14b8a6?style=for-the-badge&logo=githubpages&logoColor=white)](https://itaygoldenberg.github.io/Clothing-Store-Inventory-Manager/)
-[![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/docs/Web/HTML)
-[![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://developer.mozilla.org/docs/Web/CSS)
-[![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=111)](https://developer.mozilla.org/docs/Web/JavaScript)
-
-</div>
+> [!NOTE]
+> A frontend inventory project built around practical validation, pricing calculations and persistent state.
 
 ## Overview
 
-Clothing Store Inventory Manager is a multi-page frontend application for managing a small clothing catalog. It combines validated form input, automatic discount calculations, dynamic inventory rendering and browser persistence in a clean, practical workflow.
+Clothing Store Inventory Manager is a multi-page frontend application for recording apparel, calculating discounts and maintaining a clear product inventory.
+
+The interface combines a practical input workflow with automatic final-price calculations, visual pricing states and local persistence, all without a server dependency.
+
+<table><tr><td align="center" width="25%"><strong>8</strong><br /><sub>categories</sub></td><td align="center" width="25%"><strong>AUTO</strong><br /><sub>discount math</sub></td><td align="center" width="25%"><strong>AVG</strong><br /><sub>price summary</sub></td><td align="center" width="25%"><strong>LOCAL</strong><br /><sub>inventory state</sub></td></tr></table>
+
+| Project detail | Implementation |
+|---|---|
+| Catalog | Eight clothing categories with item details |
+| Pricing | Original price, discount and calculated final price |
+| Dashboard | Inventory count and average price |
+| Persistence | localStorage-backed catalog |
+
+## Contents
+
+- [Overview](#overview)
+- [Features](#features)
+- [Workflow](#workflow)
+- [Technology](#technology)
+- [Project structure](#project-structure)
+- [Running locally](#running-locally)
+- [Operational notes](#operational-notes)
+- [Author](#author)
 
 ## Features
 
-- Add shirts, pants, dresses, skirts, hats, jackets, shoes and socks.
-- Record a description, color, price, discount and product image URL.
-- Validate prices, discount percentages and image URLs before saving.
-- Calculate and display the final price after discount automatically.
-- Color-code pricing information for easier scanning.
-- Delete individual inventory items.
-- Track the item count and average inventory price.
-- Preserve inventory data with `localStorage`.
-- Navigate between dedicated Home and About pages.
+### Product entry
+
+Users can record category, description, color, price, discount and an image URL. Numeric ranges and URLs are validated before an item is accepted.
+
+### Pricing intelligence
+
+The final price is calculated automatically from the original price and discount. Color-coded values make the pricing state easier to scan.
+
+### Inventory operations
+
+Items appear in a structured inventory table, can be deleted individually and contribute to the live item-count and average-price summaries.
 
 ## Workflow
 
-```text
-Product form -> validation -> discount calculation -> localStorage -> inventory table
-```
+<p align="center">
+  <img src="./docs/workflow.svg" alt="Clothing Store Inventory Manager animated application workflow" width="100%" />
+</p>
 
-The application is fully client-side. Saved inventory belongs to the current browser and does not leave the device.
+## Technology
 
-## Tech Stack
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=html,css,js" alt="Clothing Store Inventory Manager primary technology logos" />
+</p>
 
 | Technology | Role |
 |---|---|
-| HTML5 | Multi-page structure, form and inventory table |
-| CSS3 | Responsive store interface and visual states |
+| HTML5 | Multi-page structure and inventory form |
+| CSS3 | Boutique-inspired responsive interface |
 | JavaScript | CRUD behavior, validation and calculations |
 | Web Storage API | Persistent inventory state |
 
-## Project Structure
+## Project structure
 
 ```text
 Clothing-Store-Inventory-Manager/
 |-- index.html     Inventory workspace
 |-- about.html     Project information
-|-- style.css      Shared visual design
-|-- main.js        Inventory and persistence logic
+|-- style.css      Shared design language
+|-- main.js        Inventory and pricing logic
+|-- docs/          README-only visual assets
 `-- README.md      Project documentation
 ```
 
-## Run Locally
+## Running locally
 
 ```bash
 git clone https://github.com/itaygoldenberg/Clothing-Store-Inventory-Manager.git
 cd Clothing-Store-Inventory-Manager
 ```
 
-Open `index.html` directly, or use VS Code Live Server for local navigation between pages.
+Open `index.html` directly or use VS Code Live Server for local page navigation.
+
+## Operational notes
+
+- The application has no remote database or authentication layer.
+- Inventory data is specific to the current browser profile.
 
 ## Author
 
-Built by **Itay Goldenberg**.
+<p align="center">
+  <strong>Itay Goldenberg</strong><br />
+  Full Stack Developer Student
+</p>
 
-[GitHub](https://github.com/itaygoldenberg) | [LinkedIn](https://www.linkedin.com/in/itay-goldenberg/)
+<p align="center">
+  <a href="https://github.com/itaygoldenberg"><img src="./docs/actions/github.svg" alt="Itay Goldenberg on GitHub" width="250" /></a>
+  <a href="https://www.linkedin.com/in/itay-goldenberg/"><img src="./docs/actions/linkedin.svg" alt="Itay Goldenberg on LinkedIn" width="250" /></a>
+</p>
